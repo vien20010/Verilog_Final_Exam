@@ -1,5 +1,5 @@
 Analysis & Synthesis report for HK2_1516_2
-Thu Jul 23 17:08:05 2020
+Thu Jul 23 17:36:00 2020
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -13,11 +13,9 @@ Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Registers Removed During Synthesis
-  9. General Register Statistics
- 10. Multiplexer Restructuring Statistics (Restructuring Performed)
- 11. Analysis & Synthesis Messages
- 12. Analysis & Synthesis Suppressed Messages
+  8. General Register Statistics
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Analysis & Synthesis Messages
 
 
 
@@ -43,12 +41,12 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                               ;
 +-----------------------------+----------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Thu Jul 23 17:08:05 2020        ;
+; Analysis & Synthesis Status ; Successful - Thu Jul 23 17:36:00 2020        ;
 ; Quartus II Version          ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
 ; Revision Name               ; HK2_1516_2                                   ;
 ; Top-level Entity Name       ; HK2_1516_2                                   ;
 ; Family                      ; MAX II                                       ;
-; Total logic elements        ; 44                                           ;
+; Total logic elements        ; 58                                           ;
 ; Total pins                  ; 31                                           ;
 ; Total virtual pins          ; 0                                            ;
 ; UFM blocks                  ; 0 / 1 ( 0 % )                                ;
@@ -150,33 +148,33 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Total logic elements                        ; 44    ;
-;     -- Combinational with no register       ; 35    ;
-;     -- Register only                        ; 0     ;
-;     -- Combinational with a register        ; 9     ;
+; Total logic elements                        ; 58    ;
+;     -- Combinational with no register       ; 44    ;
+;     -- Register only                        ; 1     ;
+;     -- Combinational with a register        ; 13    ;
 ;                                             ;       ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 2     ;
-;     -- 3 input functions                    ; 28    ;
-;     -- 2 input functions                    ; 11    ;
+;     -- 4 input functions                    ; 5     ;
+;     -- 3 input functions                    ; 36    ;
+;     -- 2 input functions                    ; 13    ;
 ;     -- 1 input functions                    ; 3     ;
 ;     -- 0 input functions                    ; 0     ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 8     ;
-;     -- arithmetic mode                      ; 36    ;
+;     -- normal mode                          ; 15    ;
+;     -- arithmetic mode                      ; 43    ;
 ;     -- qfbk mode                            ; 0     ;
 ;     -- register cascade mode                ; 0     ;
-;     -- synchronous clear/load mode          ; 0     ;
+;     -- synchronous clear/load mode          ; 8     ;
 ;     -- asynchronous clear/load mode         ; 0     ;
 ;                                             ;       ;
-; Total registers                             ; 9     ;
-; Total logic cells in carry chains           ; 41    ;
+; Total registers                             ; 14    ;
+; Total logic cells in carry chains           ; 49    ;
 ; I/O pins                                    ; 31    ;
 ; Maximum fan-out node                        ; clk   ;
-; Maximum fan-out                             ; 9     ;
-; Total fan-out                               ; 130   ;
-; Average fan-out                             ; 1.73  ;
+; Maximum fan-out                             ; 14    ;
+; Total fan-out                               ; 192   ;
+; Average fan-out                             ; 2.16  ;
 +---------------------------------------------+-------+
 
 
@@ -185,23 +183,9 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------+
 ; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name ; Library Name ;
 +----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------+
-; |HK2_1516_2                ; 44 (44)     ; 9            ; 0          ; 31   ; 0            ; 35 (35)      ; 0 (0)             ; 9 (9)            ; 41 (41)         ; 0 (0)      ; |HK2_1516_2         ; work         ;
+; |HK2_1516_2                ; 58 (58)     ; 14           ; 0          ; 31   ; 0            ; 44 (44)      ; 1 (1)             ; 13 (13)          ; 49 (49)         ; 0 (0)      ; |HK2_1516_2         ; work         ;
 +----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+--------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                             ;
-+---------------------------------------+----------------------------------------+
-; Register name                         ; Reason for Removal                     ;
-+---------------------------------------+----------------------------------------+
-; R1~reg0                               ; Merged with G2~reg0                    ;
-; G1~reg0                               ; Merged with Y2~reg0                    ;
-; Y1~reg0                               ; Merged with R2~reg0                    ;
-; Y2~reg0                               ; Stuck at GND due to stuck port data_in ;
-; R2~reg0                               ; Merged with G2~reg0                    ;
-; Total Number of Removed Registers = 5 ;                                        ;
-+---------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -209,12 +193,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 9     ;
-; Number of registers using Synchronous Clear  ; 0     ;
+; Total registers                              ; 14    ;
+; Number of registers using Synchronous Clear  ; 8     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 6     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -224,7 +208,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |HK2_1516_2|G2~reg0        ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |HK2_1516_2|R1~reg0        ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
@@ -234,30 +218,20 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Thu Jul 23 17:08:04 2020
+    Info: Processing started: Thu Jul 23 17:35:59 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off HK2_1516_2 -c HK2_1516_2
 Info: Found 1 design units, including 1 entities, in source file hk2_1516_2.v
     Info: Found entity 1: HK2_1516_2
 Info: Elaborating entity "HK2_1516_2" for the top level hierarchy
 Warning (10230): Verilog HDL assignment warning at HK2_1516_2.v(8): truncated value with size 32 to match size of target (8)
-Warning: Output pins are stuck at VCC or GND
-    Warning (13410): Pin "G1" is stuck at GND
-    Warning (13410): Pin "Y2" is stuck at GND
-Info: Implemented 75 device resources after synthesis - the final resource count might be different
+Info: Implemented 89 device resources after synthesis - the final resource count might be different
     Info: Implemented 25 input pins
     Info: Implemented 6 output pins
-    Info: Implemented 44 logic cells
-Info: Generated suppressed messages file E:/STUDY/192_semester/Embedded_Control_Systems/Exercise/Homework_Chap2_2/HK2_1516_2/HK2_1516_2.map.smsg
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 229 megabytes
-    Info: Processing ended: Thu Jul 23 17:08:05 2020
+    Info: Implemented 58 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 223 megabytes
+    Info: Processing ended: Thu Jul 23 17:36:00 2020
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
-
-
-+------------------------------------------+
-; Analysis & Synthesis Suppressed Messages ;
-+------------------------------------------+
-The suppressed messages can be found in E:/STUDY/192_semester/Embedded_Control_Systems/Exercise/Homework_Chap2_2/HK2_1516_2/HK2_1516_2.map.smsg.
 
 

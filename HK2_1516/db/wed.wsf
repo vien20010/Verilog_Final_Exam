@@ -263,17 +263,17 @@ VECTOR("E:/STUDY/192_semester/Embedded_Control_Systems/Exercise/Homework_Chap2_2
 	}
 }
 
-VECTOR("E:/STUDY/192_semester/Embedded_Control_Systems/Exercise/Homework_Chap2_2/HK2_1516/db/HK2_1516.sim.cvwf")
+VECTOR("E:/STUDY/192_semester/Embedded_Control_Systems/Exercise/Homework_Chap2_2/HK2_1516/HK2_1516.vwf")
 {
 	ZOOM{
-		ZBEGIN = 0;
-		ZEND = 87595360;
-		NUMERATOR = 909;
-		DENOMINATOR = 87595360;
+		ZBEGIN = 48000000;
+		ZEND = 80000000;
+		NUMERATOR = 1091;
+		DENOMINATOR = 32000000;
 		TOP_INDEX = 0;
 	}
 	CLOCK{
-		PERIOD = 10000;
+		PERIOD = 1000000;
 		OFFSET = 0;
 		DUTY_CYCLE = 50;
 	}
@@ -506,17 +506,17 @@ VECTOR("E:/STUDY/192_semester/Embedded_Control_Systems/Exercise/Homework_Chap2_2
 	}
 }
 
-VECTOR("E:/STUDY/192_semester/Embedded_Control_Systems/Exercise/Homework_Chap2_2/HK2_1516/HK2_1516.vwf")
+VECTOR("E:/STUDY/192_semester/Embedded_Control_Systems/Exercise/Homework_Chap2_2/HK2_1516/db/HK2_1516.sim.cvwf")
 {
 	ZOOM{
-		ZBEGIN = 48000000;
-		ZEND = 80000000;
-		NUMERATOR = 1091;
-		DENOMINATOR = 32000000;
+		ZBEGIN = 0;
+		ZEND = 62500000;
+		NUMERATOR = 909;
+		DENOMINATOR = 62500000;
 		TOP_INDEX = 0;
 	}
 	CLOCK{
-		PERIOD = 1000000;
+		PERIOD = 10000;
 		OFFSET = 0;
 		DUTY_CYCLE = 50;
 	}
