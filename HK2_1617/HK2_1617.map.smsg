@@ -1,0 +1,4 @@
+Warning (10273): Verilog HDL warning at HK2_1617.v(36): extended using "x" or "z"
+Warning (10273): Verilog HDL warning at HK2_1617.v(49): extended using "x" or "z"
+Warning (10273): Verilog HDL warning at HK2_1617.v(62): extended using "x" or "z"
+Warning (10268): Verilog HDL information at HK2_1617.v(12): always construct contains both blocking and non-blocking assignments
